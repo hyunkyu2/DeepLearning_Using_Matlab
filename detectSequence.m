@@ -1,6 +1,9 @@
+%% Author
+% Kookmin Univ, GSAK
+% IVSP Lab, Wonwoo Lee
 %% Object detection in Video by Using trained Network
 % detector is trained Network (Yolo v2, R-CNN, SDD, GoogleNet etc.)
-% directory is working space has sequence picture
+% directory is working space has sequence% picture('C:\Users\user\Desktop\image\Data\')
 % the Video is saved in MATLAB folder in doucument
 function detectSequence(detector, directory, saveFileName, frameRate)
 cnt = dir(fullfile(directory,'*.png'));
@@ -39,12 +42,3 @@ close(outputVideo)
 %% Video Play in matlab
 savedFileName = strcat(saveFileName);
 implay(savedFileName)
-% savedVideo = VideoReader(fullfile('C:\Users\user\Documents\MATLAB',savedFileName));
-% ii = 1;
-% while hasFrame(shuttleAvi)
-%     mov(ii) = im2frame(readFrame(savedVideo));
-%     ii = ii+1;
-% end
-% figure
-% imshow(mov(1).cdata, 'Border', 'tight')
-% movie(mov,1,savedVideo.FrameRate)
